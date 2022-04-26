@@ -39,7 +39,7 @@ class block_recitworkplan extends block_list {
         $PAGE->requires->css(new moodle_url($CFG->wwwroot . '/local/recitworkplan/react_app/index.css?v='), true);
         $PAGE->requires->js(new moodle_url($CFG->wwwroot . '/local/recitworkplan/react_app/index.js?v='), true);
         $studentId = $USER->id;
-        $mode = $this->isTeacher() ? 'a' : 'sb';
+        $mode = $this->isTeacher() ? 'ab' : 'sb';
         
 
         $this->content =  new stdClass;
