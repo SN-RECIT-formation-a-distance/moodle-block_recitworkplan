@@ -15,20 +15,14 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Version details
+ * Strings for component 'block_course_list', language 'en', branch 'MOODLE_20_STABLE'
  *
- * @package    block_course_list
- * @copyright  1999 onwards Martin Dougiamas (http://dougiamas.com)
- * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ * @package   block_course_list
+ * @copyright 1999 onwards Martin Dougiamas  {@link http://moodle.com}
+ * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-defined('MOODLE_INTERNAL') || die();
-
-$plugin->version   = 2022020907;        // The current plugin version (Date: YYYYMMDDXX)
-$plugin->requires  = 2020061500.00; // Moodle 3.9.0
-$plugin->component = 'block_recitworkplan'; // Full name of the plugin (used for diagnostics)
-$plugin->release = 'v1.0.0';
-$plugin->dependencies = [
-    'local_recitworkplan' => 2022020907
-];
-$plugin->maturity = MATURITY_ALPHA;
+$string['recitworkplan:addinstance'] = 'Ajouter un nouveau bloc recitworkplan';
+$string['recitworkplan:myaddinstance'] = 'Ajouter un nouveau bloc recitworkplan au tableau de bord';
+$string['pluginname'] = 'RÉCIT Plan de travail';
+$string['privacy:metadata'] = 'Le bloc recitworkplan n\'affiche que des données sur les cours et ne stocke aucune donnée lui-même.';
