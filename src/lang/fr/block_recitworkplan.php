@@ -24,5 +24,5 @@
 
 $string['recitworkplan:addinstance'] = 'Ajouter un nouveau bloc recitworkplan';
 $string['recitworkplan:myaddinstance'] = 'Ajouter un nouveau bloc recitworkplan au tableau de bord';
-$string['pluginname'] = 'RÉCIT Plan de travail';
+$string['pluginname'] = 'Plan de travail';
 $string['privacy:metadata'] = 'Le bloc recitworkplan n\'affiche que des données sur les cours et ne stocke aucune donnée lui-même.';
