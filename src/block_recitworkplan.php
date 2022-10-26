@@ -27,7 +27,9 @@ include_once($CFG->dirroot . '/local/recitworkplan/lib.php');
 
 class block_recitworkplan extends block_list {
     function init() {
-        $this->title = get_string('pluginname', 'block_recitworkplan');
+        global $CFG;
+        $url = new moodle_url($CFG->wwwroot . '/local/recitworkplan/view.php');
+        $this->title = "<a href='".$url->out()."'>".get_string('pluginname', 'block_recitworkplan')."</a>";
     }
 
     function has_config() {
