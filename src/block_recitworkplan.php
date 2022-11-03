@@ -35,6 +35,10 @@ class block_recitworkplan extends block_list {
     function has_config() {
         return true;
     }
+    
+    public function hide_header() {
+        return true;
+    }
 
     function get_content() {
         global $USER, $PAGE, $CFG;
@@ -44,8 +48,8 @@ class block_recitworkplan extends block_list {
         $mode = $this->isTeacher() ? 'ab' : 'sb';
         
 
-        $this->content =  new stdClass;
-        $this->content->footer = sprintf("<div id='recit_workplan' data-user-id='%ld' data-mode='%s'></div>", $studentId, $mode);
+        $this->content = new stdClass;
+        $this->content->footer = sprintf("<h5>%s</h5>", $this->title) . sprintf("<div id='recit_workplan' data-user-id='%ld' data-mode='%s'></div>", $studentId, $mode);
         $this->content->text = '';
         return $this->content;
     }
