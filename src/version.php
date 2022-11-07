@@ -24,12 +24,12 @@
 
 defined('MOODLE_INTERNAL') || die();
 
-$plugin->version   = 2022020907;        // The current plugin version (Date: YYYYMMDDXX)
+$plugin->version   = 2022110700;        // The current plugin version (Date: YYYYMMDDXX)
 $plugin->requires  = 2020061500.00; // Moodle 3.9.0
 $plugin->component = 'block_recitworkplan'; // Full name of the plugin (used for diagnostics)
-$plugin->release = 'v1.0.0-beta';
-$plugin->supported = [39, 311];      //  Moodle 3.9.x, 3.10.x and 3.11.x are supported.
+$plugin->release = 'v1.1.0-beta';
+$plugin->supported = [39, 400];      //  Moodle 3.9.x, 3.10.x and 3.11.x are supported.
 $plugin->dependencies = [
-    'local_recitworkplan' => 2022020907
+    'local_recitworkplan' => 2022110700
 ];
 $plugin->maturity = MATURITY_BETA;
