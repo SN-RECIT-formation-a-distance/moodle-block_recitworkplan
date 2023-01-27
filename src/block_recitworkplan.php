@@ -14,13 +14,6 @@
 // You should have received a copy of the GNU General Public License
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
-/**
- * Course list block.
- *
- * @package    block_course_list
- * @copyright  1999 onwards Martin Dougiamas (http://dougiamas.com)
- * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
- */
 
 include_once($CFG->dirroot . '/course/lib.php');
 include_once($CFG->dirroot . '/local/recitworkplan/lib.php');
@@ -42,8 +35,8 @@ class block_recitworkplan extends block_list {
 
     function get_content() {
         global $USER, $PAGE, $CFG;
-        $PAGE->requires->css(new moodle_url($CFG->wwwroot . '/local/recitworkplan/react_app/index.css'), true);
-        $PAGE->requires->js(new moodle_url($CFG->wwwroot . '/local/recitworkplan/react_app/index.js'), true);
+        $PAGE->requires->css(new moodle_url($CFG->wwwroot . '/local/recitworkplan/react/build/index.css'), true);
+        $PAGE->requires->js(new moodle_url($CFG->wwwroot . '/local/recitworkplan/react/build/index.js'), true);
         $studentId = $USER->id;
         $mode = $this->isTeacher() ? 'ab' : 'sb';
         
