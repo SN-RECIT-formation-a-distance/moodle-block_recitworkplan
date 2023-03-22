@@ -20,7 +20,11 @@ include_once($CFG->dirroot . '/local/recitworkplan/lib.php');
 
 class block_recitworkplan extends block_list {
     function init() {
-        global $CFG;
+        global $CFG, $PAGE;
+        
+        $PAGE->requires->css(new moodle_url($CFG->wwwroot . '/local/recitworkplan/react/build/index.css'), true);
+        $PAGE->requires->js(new moodle_url($CFG->wwwroot . '/local/recitworkplan/react/build/index.js'), true);
+
         $url = new moodle_url($CFG->wwwroot . '/local/recitworkplan/view.php');
         $this->title = "<a href='".$url->out()."'>".get_string('pluginname', 'block_recitworkplan')."</a>";
     }
@@ -34,12 +38,10 @@ class block_recitworkplan extends block_list {
     }
 
     function get_content() {
-        global $USER, $PAGE, $CFG;
-        $PAGE->requires->css(new moodle_url($CFG->wwwroot . '/local/recitworkplan/react/build/index.css'), true);
-        $PAGE->requires->js(new moodle_url($CFG->wwwroot . '/local/recitworkplan/react/build/index.js'), true);
+        global $USER;
+        
         $studentId = $USER->id;
         $mode = $this->isTeacher() ? 'ab' : 'sb';
-        
 
         $this->content = new stdClass;
         $this->content->footer = sprintf("<h5>%s</h5>", $this->title) . sprintf("<div id='recit_workplan' data-user-id='%ld' data-mode='%s'></div>", $studentId, $mode);
