@@ -36,7 +36,7 @@ class block_recitworkplan extends block_list {
     function get_content() {
         global $USER, $PAGE, $CFG;
         $PAGE->requires->css(new moodle_url($CFG->wwwroot . '/local/recitworkplan/react/build/index.css'), true);
-        $PAGE->requires->js(new moodle_url($CFG->wwwroot . '/local/recitworkplan/react/build/index.js'), true);
+        $PAGE->requires->js(new moodle_url($CFG->wwwroot . '/local/recitworkplan/react/build/index.js?201'), true);
         $studentId = $USER->id;
         $mode = $this->isTeacher() ? 'ab' : 'sb';
         
