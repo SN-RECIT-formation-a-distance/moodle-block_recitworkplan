@@ -36,13 +36,13 @@ class block_recitworkplan extends block_list {
     function get_content() {
         global $USER, $PAGE, $CFG;
         $PAGE->requires->css(new moodle_url($CFG->wwwroot . '/local/recitworkplan/react/build/index.css'), true);
-        $PAGE->requires->js(new moodle_url($CFG->wwwroot . '/local/recitworkplan/react/build/index.js?201'), true);
+        $PAGE->requires->js(new moodle_url($CFG->wwwroot . '/local/recitworkplan/react/build/index.js?115'), true);
         $studentId = $USER->id;
         $mode = $this->isTeacher() ? 'ab' : 'sb';
         
 
         $this->content = new stdClass;
-        $this->content->footer = sprintf("<h5>%s</h5>", $this->title) . sprintf("<div id='recit_workplan' data-user-id='%ld' data-mode='%s'></div>", $studentId, $mode);
+        $this->content->footer = sprintf("<h5>%s</h5>", $this->title) . sprintf("<div id='recit_workplan' class='recit_workplan' data-user-id='%ld' data-mode='%s'></div>", $studentId, $mode);
         $this->content->text = '';
         return $this->content;
     }
